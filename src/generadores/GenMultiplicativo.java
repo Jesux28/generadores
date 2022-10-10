@@ -4,12 +4,16 @@
  */
 package generadores;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  *
  * @author jesux28
- */
-public class GenMultiplicativo extends javax.swing.JFrame {
+ */ 
 
+public class GenMultiplicativo extends javax.swing.JFrame {
+    private int[] valores  = {3,11,13,19,21,27,29,37,53,59,61,67,69,77,83,91};
     /**
      * Creates new form MIxto
      */
@@ -30,14 +34,14 @@ public class GenMultiplicativo extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        Tabla = new javax.swing.JTable();
+        Text1 = new javax.swing.JTextField();
+        Text2 = new javax.swing.JTextField();
+        Text3 = new javax.swing.JTextField();
+        Botoncal = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        Text5 = new javax.swing.JTextField();
+        Text4 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,8 +52,102 @@ public class GenMultiplicativo extends javax.swing.JFrame {
 
         jLabel4.setText("Inserte un valor para el Modulo m");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        Tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -69,12 +167,12 @@ public class GenMultiplicativo extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(Tabla);
 
-        jButton1.setText("Calcular ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Botoncal.setText("Calcular ");
+        Botoncal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotoncalActionPerformed(evt);
             }
         });
 
@@ -87,7 +185,7 @@ public class GenMultiplicativo extends javax.swing.JFrame {
 
         jLabel5.setText("GENERADOR CONGRUENCIAL MULTIPLICATIVO");
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("Inserte el numero de valores a calcular");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,7 +196,7 @@ public class GenMultiplicativo extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 718, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(187, 187, 187)
-                .addComponent(jButton1)
+                .addComponent(Botoncal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(181, 181, 181))
@@ -109,26 +207,26 @@ public class GenMultiplicativo extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jLabel2))
+                                    .addGap(88, 88, 88))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(95, 95, 95)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel2))
-                                .addGap(88, 88, 88)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Text5)
-                                    .addComponent(jTextField4)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addGap(64, 64, 64))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
-                                    .addComponent(jTextField2))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Text2, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(Text1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Text4, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Text3, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(6, 6, 6))))
         );
         layout.setVerticalGroup(
@@ -139,22 +237,22 @@ public class GenMultiplicativo extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Text1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Text2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Text3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Text5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Text4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(Botoncal)
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -163,9 +261,49 @@ public class GenMultiplicativo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BotoncalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoncalActionPerformed
+               try{     
+                   int Xo =  Integer.parseInt(Text1.getText());
+                    int a =  Integer.parseInt(Text2.getText());
+                    int m =  Integer.parseInt(Text3.getText());
+                    int n =   Integer.parseInt(Text4.getText());
+                    ArrayList<Integer> l1 = new ArrayList<>();
+                    ArrayList<Integer> l2 = new ArrayList<>();
+                    lista(Xo,l1);
+                    lista(m, l2);
+                    //Primera condicion: LA semilla debe ser un numero primo impar, no divisble entre 2 y 5 y ser primo entre si con m
+                    if(Xo%2 == 1 && Xo%5!=0 && primo(a) && !factorComun(l1, l2) ){
+                        //Segunda condicion:  debemos encontrar valores p(Valores en el arreglo valores) y t numero entero desde el 0
+                        //Tal que a = 200*t + - p
+                            int[] tp = {-1,-1};
+                           busquedaP(a,tp);
+                            System.out.println(""+tp[0]+""+tp[1]);
+                            if(tp[0] != -1 && tp[1] !=-1){
+                               //El modelo es CORRECTO, podemos calcular los valores 
+                                       System.out.println("Modelo Correcto");                                     
+                                       for(int i=1;i<=n+1;i++){
+                                           Tabla.setValueAt(i-1, i,0);
+                                           Tabla.setValueAt(Xo, i, 1);
+                                           Tabla.setValueAt(a*Xo, i, 2);                                 
+                                                int Xn = (a*Xo)%m;
+                                                Tabla.setValueAt(Xn, i, 3);
+                                                double Un =  ((double)Xn/m);
+                                                Un = Math.round(Un*100d)/100d;
+                                                Tabla.setValueAt(Un, i, 4);
+                                                 Xo = Xn;
+                                       }
+                                       //CALCULO PERIODO
+                                       
+                            }else{
+                                 System.out.println("Segunda condicion no cumplida");
+                            }
+                    }else{
+                        System.out.println("Primera condicion no cumplida");
+                    }
+               }catch(Exception e ){
+                     System.out.println(e.toString());
+               }
+    }//GEN-LAST:event_BotoncalActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -206,10 +344,75 @@ public class GenMultiplicativo extends javax.swing.JFrame {
             }
         });
     }
+    
+    public boolean primo(int a){
+        boolean res = true;
+        int div = 0;
+        //Si es primo debe ser divisible entre si mismo, no tomamos en cuenta el 1 por que partimos del 2 
+        for(int i=2; i<=a;i++){
+            //SI el numero es divisible 
+            if(a%i==0){
+                  div++;
+            }
+        }
+        if(div > 1){
+            res = false; 
+        }
+        return res;
+   }
+    
+     /**Descomponemos a C y m */
+    public void lista(int num, ArrayList<Integer> l){
+          int div = 2;
+          while(num > 1){
+              if(num%div == 0 ){
+                   num = num/div;
+                   l.add(div);
+                   lista(num,l);
+              }else{
+                  div++;
+              }
+          }
+    }
+    /**Vemos si hay un factor comun*/
+    public boolean factorComun(ArrayList<Integer> l1, ArrayList<Integer> l2){
+         boolean res = false;
+         Iterator i1 = l1.iterator();
+         while(i1.hasNext() && res!=true){
+             int num = (int)i1.next();
+             res = l2.contains(num);
+         }         
+         return res;
+    }
+    
+    public void busquedaP(int a,int[] devuelve){
+        int t = 0;
+        int p = valores[0];
+
+        //Comenzamos con i = 0
+        int i = 0;
+        while(200*t+p < a && 200*t-p<a){
+             if(valores[i] == 91){
+                i = 0;
+                t++;
+             }
+             i++;
+             p = valores[i];
+        }
+        if(200*t+p==a || 200*t-p == a){
+           devuelve[0] = t;
+           devuelve[1] = p;
+            System.out.println(""+devuelve[0]+""+devuelve[1]);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Text5;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Botoncal;
+    private javax.swing.JTable Tabla;
+    private javax.swing.JTextField Text1;
+    private javax.swing.JTextField Text2;
+    private javax.swing.JTextField Text3;
+    private javax.swing.JTextField Text4;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -217,9 +420,5 @@ public class GenMultiplicativo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }
